@@ -6,6 +6,19 @@
     </ion-navbar>
 </ion-header>
 <ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>Name</ion-col>
+            <ion-col>Item</ion-col>
+            <ion-col>Quantity</ion-col>
+        </ion-row>
+    </ion-grid>
     
+    <ion-infinite-scroll (ionInfinite) ="doInfinte($event)" >
+            <ion-infinite-scroll-content
+                loadingSpinner="bubbles"
+                loadingText="Loading products from categories"
+            ></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>
 
