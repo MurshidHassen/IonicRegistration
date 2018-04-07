@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController , AlertController} from 'ionic-angular';
+
+import{RegisterPage} from '../register/register';
+
 
 @Component({
   selector: 'page-home',
@@ -7,8 +10,31 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  @ViewChild('username') uname;
+  @ViewChild('password') password;
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
+  }
+
+  signIn(){
+    if(this.uname.value=="admin" && this.password.value=="admin"){
+      let alert = this.alertCtrl.create({
+        title: 'Login Successful!',
+        subTitle: 'You are logged in',
+        buttons: ['OK']
+      });
+      alert.present();
+
+    }
+
+   
+    
+  }
+
+  signUp(){
+
+    this.navCtrl.push(RegisterPage);
+    
   }
 
 }
