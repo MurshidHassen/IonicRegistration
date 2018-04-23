@@ -17,7 +17,7 @@ To get started with the project:
     for android `ionic cordova emulate android` 
     and then for real devices `cordova run android`
 
-for initial testing on deivces tested it on my android device. It workded. for iOS i didn't have a device. 
+for initial testing on devices tested it on my android device. It workded. for iOS i didn't have a device. 
 
 Contribution:
 Create your branch:
