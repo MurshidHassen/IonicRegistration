@@ -11,8 +11,8 @@ import { RegisterPage } from '../pages/register/register';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../app/config';
-import {AngularFireAuthModule} from 'angularfire2/auth';
-
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig.fire),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
