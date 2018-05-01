@@ -18,6 +18,7 @@ import { DetailPage } from '../pages/detail/detail';
 import { RemovePage } from '../pages/remove/remove';
 import { ViewDataPage } from '../pages/view-data/view-data';
 import { AngularFireDatabaseModule } from 'angularfire2/database'
+import { EditPage } from '../pages/edit/edit'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database'
     DatacontrolPage,
     DetailPage,
     RemovePage,
-    ViewDataPage
+    ViewDataPage,
+    EditPage,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database'
     DetailPage,
     RemovePage,
     ViewDataPage,
+    EditPage,
   ],
   providers: [
     StatusBar,

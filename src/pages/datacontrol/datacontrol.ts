@@ -3,6 +3,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 import { ViewDataPage } from '../view-data/view-data';
 import { DetailPage } from '../detail/detail';
 import { RemovePage } from '../remove/remove';
+import { EditPage } from '../edit/edit'
 
 @IonicPage()
 @Component({
@@ -16,11 +17,12 @@ export class DatacontrolPage {
   private viewpage;
   private addpage;
   private remove;
+  private edit;
   constructor(public navCtrl: NavController) {
     this.viewpage = ViewDataPage;
     this.addpage = DetailPage;
     this.remove = RemovePage;
-
+    this.edit = EditPage;
   }
 
   ionViewDidLoad() {
@@ -39,7 +41,12 @@ export class DatacontrolPage {
     this.navCtrl.push(this.remove);
   }
 
-  editdata(){
-    // add the editing page
+  logout(){
+
   }
+
+  editdata(){
+    this.navCtrl.push(this.edit);
+  }
+  
 }

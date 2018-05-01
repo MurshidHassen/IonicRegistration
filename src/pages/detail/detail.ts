@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController} from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AngularFireDatabase } from 'angularfire2/database'
+import { DatacontrolPage  } from '../datacontrol/datacontrol'
 
 /**
  * Generated class for the DetailPage page.
@@ -33,10 +34,11 @@ export class DetailPage {
   item: item = new item();
 
   private homepage;
+  private datacontrol;
   constructor(public navCtrl: NavController, public db: AngularFireDatabase) {
-    this.homepage= HomePage;
+    this.homepage = HomePage;
     // update the db with the need value if its is finalized
-
+    this.datacontrol = DatacontrolPage;
   }
 
   ionViewDidLoad() {
@@ -52,6 +54,6 @@ export class DetailPage {
 
     this.db.list('Items').push(this.item);  
     this.item = new item();
-    this.navCtrl.pop(this.homepage);
+    this.navCtrl.pop(this.datacontrol);
   }
 }
