@@ -8,24 +8,27 @@
 
   <ion-navbar>
     <ion-title>
-        Data Control
-        <!-- <div class = "elem" align="right"> -->
-            
-        <!-- </div> -->
+      Data Control
+      <!-- <div class = "elem" align="right"> -->
+
+      <!-- </div> -->
     </ion-title>
-    <button class="log" ion-button round (click)='logout()'>logout</button>
+    <button class="log" ion-button round (click)='logout()' floating:left>logout</button>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
   <div padding align="center">
-    <button ion-button round (click)='viewdata()'>View Data</button>
-</div>
-<div padding align="center">
-    <button ion-button round (click)='adddata()'>Add Data</button>
-</div>
-<div padding align="center">
-    <button ion-button round (click)='removedata()'>Remove Data</button>
-</div>
+    <button ion-button full (click)='viewdata()'>View Data</button>
+  </div>
+  <div padding align="center">
+    <button ion-button full (click)='addata()'>Add Data</button>
+  </div>
+  <div padding align="center">
+    <button ion-button full (click)='removedata()'>Remove Data</button>
+  </div>
+  <div padding align="center">
+    <button ion-button full (click)='editdata()'>Edit Data</button>
+  </div>
 </ion-content>

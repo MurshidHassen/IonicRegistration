@@ -3,11 +3,11 @@
 export const environment = {
     production: false,
     firebase: {
-        apiKey: '<your-key>',
-        authDomain: '<your-project-authdomain>',
-        databaseURL: '<your-database-URL>',
-        projectId: '<your-project-id>',
-        storageBucket: '<your-storage-bucket>',
-        messagingSenderId: '<your-messaging-sender-id>'
+        apiKey: "AIzaSyBACdb6IsVGbalEnzA3mUsUxTd-BTiPQ_8",
+        authDomain: "registrationapp-70ac4.firebaseapp.com",
+        databaseURL: "https://registrationapp-70ac4.firebaseio.com",
+        projectId: "registrationapp-70ac4",
+        storageBucket: "registrationapp-70ac4.appspot.com",
+        messagingSenderId: "744823790408"
     }
 };

@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      View Data
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Name</ion-col>
+      <ion-col>Item</ion-col>
+      <ion-col>Quantity</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let name of nameofitems | async">
+            {{name.name | json}}
+          </ion-item>
+          <!--
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    <ion-item>Name List</ion-item>
+                    -->
+        </ion-list>
+      </ion-col>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let item of nameofitems | async">
+            {{item.item | json}}
+          </ion-item>
+          <!--
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    <ion-item>Item List</ion-item>
+                    -->
+        </ion-list>
+      </ion-col>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let quantity of nameofitems | async">
+            {{quantity.quantity | json}}
+          </ion-item>
+          <!--
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        <ion-item>Item List</ion-item>
+                        -->
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--<ion-infinite-scroll (ionInfinite) ="doInfinte($event)" >
+            <ion-infinite-scroll-content
+                loadingSpinner="bubbles"
+                loadingText="Loading products from categories"
+            ></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+-->
+  <ion-row>
+    <ion-col>
+      <button ion-button block full (click)="addItem(name)"> Add </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button block full (click)="removeItem(name)"> Remove </button>
+    </ion-col>
+  </ion-row>
+</ion-content>
