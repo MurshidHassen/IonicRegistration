@@ -16,6 +16,7 @@ class item {
   item:string
   quantity:string
   id:string
+  checkedState:false
   constructor(){}
 }
 
